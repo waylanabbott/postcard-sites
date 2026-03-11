@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    @page { size: 6.25in 4.25in; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        width: 6.25in;
+        height: 4.25in;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        overflow: hidden;
+        background: #ffffff;
+        color: #1f2937;
+        position: relative;
+    }
+
+    /* Lob 4x6 back layout:
+       - Top-left corner: Lob prints return address (~0.6in tall)
+       - Right half (3.125in): Lob prints recipient address + postage
+       - Our content: left half, below return address area */
+    .safe-zone {
+        position: absolute;
+        top: 0.625in;
+        left: 0.25in;
+        width: 2.75in;
+        bottom: 0.25in;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .msg-header {
+        margin-bottom: 10px;
+    }
+    .msg-header h2 {
+        font-size: 17px;
+        font-weight: 800;
+        color: #15803d;
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+    .msg-header .subtitle {
+        font-size: 9px;
+        color: #6b7280;
+    }
+
+    .msg-body {
+        font-size: 9.5px;
+        line-height: 1.55;
+        color: #374151;
+    }
+    .msg-body p { margin-bottom: 7px; }
+    .msg-body .highlight {
+        font-weight: 700;
+        color: #15803d;
+    }
+
+    .brand-mark {
+        font-size: 8px;
+        color: #9ca3af;
+        margin-top: 10px;
+    }
+    .brand-mark strong {
+        color: #6b7280;
+        font-weight: 700;
+    }
+</style>
+</head>
+<body>
+    <div class="safe-zone">
+        <div class="msg-header">
+            <h2>Your Free Website<br>is Live</h2>
+            <div class="subtitle">We built it for you -- no cost, no obligation</div>
+        </div>
+        <div class="msg-body">
+            <p>Hi <span class="highlight">Price is Right Landscaping</span>,</p>
+            <p>We noticed your business could use a stronger online presence, so we built you a <span class="highlight">free, professional website</span>.</p>
+            <p>It's live with your business info, reviews, and a click-to-call button. Scan the QR code on the front to see it.</p>
+            <p>Want changes? Just reach out.</p>
+        </div>
+        <div class="brand-mark">
+            <strong>David AI</strong> -- getdavid.ai
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    @page { size: 6.25in 4.25in; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        width: 6.25in;
+        height: 4.25in;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        overflow: hidden;
+        background: #ffffff;
+        color: #1a1a2e;
+        position: relative;
+    }
+
+    .accent-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: #1e40af;
+    }
+
+    .safe-zone {
+        position: absolute;
+        top: 0.2in;
+        left: 0.25in;
+        right: 0.25in;
+        bottom: 0.2in;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .text-area {
+        flex: 1;
+        padding-right: 0.3in;
+    }
+
+    .biz-name {
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #1e40af;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 1.08;
+        color: #1a1a2e;
+        margin-bottom: 12px;
+        letter-spacing: -0.02em;
+    }
+
+    .value-prop {
+        font-size: 12px;
+        line-height: 1.6;
+        color: #4b5563;
+        margin-bottom: 6px;
+    }
+
+    .checklist {
+        list-style: none;
+        margin-bottom: 0;
+    }
+    .checklist li {
+        font-size: 11px;
+        color: #374151;
+        padding: 3px 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .checklist .check {
+        color: #1e40af;
+        font-weight: 800;
+        font-size: 13px;
+    }
+
+    .qr-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 1.8in;
+    }
+
+    .qr-box {
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    .qr-box img {
+        width: 1.2in;
+        height: 1.2in;
+        display: block;
+    }
+
+    .qr-label {
+        font-size: 12px;
+        font-weight: 800;
+        color: #1a1a2e;
+        text-align: center;
+        line-height: 1.3;
+    }
+    .qr-sublabel {
+        font-size: 9px;
+        color: #9ca3af;
+        text-align: center;
+        margin-top: 3px;
+    }
+
+    .brand-mark {
+        position: absolute;
+        bottom: 0.15in;
+        left: 0.25in;
+        font-size: 7px;
+        color: #d1d5db;
+        letter-spacing: 0.5px;
+    }
+</style>
+</head>
+<body>
+    <div class="accent-bar"></div>
+    <div class="safe-zone">
+        <div class="text-area">
+            <div class="biz-name">Pacific North Utah's Home Plumbers Eagle Mountain</div>
+            <h1>Claim Your<br>Free Website</h1>
+            <p class="value-prop">We want to build your business a professional website. Completely free.</p>
+            <ul class="checklist">
+                <li><span class="check">+</span> Custom design for your business</li>
+                <li><span class="check">+</span> Click-to-call button</li>
+                <li><span class="check">+</span> Google reviews displayed</li>
+                <li><span class="check">+</span> Mobile-friendly</li>
+                <li><span class="check">+</span> No cost, no obligation</li>
+            </ul>
+        </div>
+        <div class="qr-area">
+            <div class="qr-box">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzwAAAM8CAIAAAAdlDK5AAAYvElEQVR4nO3dUW7rQIIEQXvh+19Ze4AFZgi8Rm8lFXEAiyIpOsGf+v18Pj8AAGz7n//vAwAA4L8TbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAL+fsb8/v7+fKvP5/Pzrdfi5nd/8r2eHM+p83Pqu5/6Xjc/q3iPrZ3ntz5b1u6fJ04d89rzZ+0837T22/GmDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgIC57dHiFtgTp7bb1nbr3mrt/Lz1ut885rXvfnPDtLhzuratWfx93fTN/5dv8qYNACBAtAEABIg2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAgOT26Nqm2Nrm2s1Nw5vn+dT3Km4Rrt1jbz2etefGzfvw5jVdO+a1XdHiJmbx91XkTRsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABr90e/WbfvIm5ttn3zZuYNxXPzzdvfa7teK49x976O+XfedMGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAgO3RF7q5K3pz1+/mPuDaNmJxi3DteNac+u5r98+Tv3Pqs04dz9oW883vTos3bQAAAaINACBAtAEABIg2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAAS8dnvU5trOHt/avuSpbcRT1nYYn1g7P6cUdzxv/k7fet1PWdv2XVM85jXetAEABIg2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABCQ3B5d27Jcs7Z7uPZ3nlj7Xk+snee1zdDi8fg7d/7OE2vf64mb58f/5Tu8aQMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACDg9+YeHzuKm3Rrx/PE2n5icR9wbTP0ibXnqu91x9o+6dr14t950wYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAEDA389L2XNsncO1a3Fq++/mZz35O8Udz+Lva+35s7ZBWXy2PPHN92rxu3/GfhdPeNMGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAwO/a9tZbd9CK5/mUtR3Pm9Z2Ideu+1ufGzf3ZIvHXLxXi8fz1mv6+eLdXm/aAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACJjbHl2ztg+4Zu3+KZ7ntX3JU9aO+a0bnU988/GsPcO/+TwXfcb+x3nTBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAACRBsAQMDfz5i3bqXd3Ctc21g89Vlr1s7Pk89a26A8Ze17re1mfvPeZfHZW3yuFp+HRd60AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAEDC3Pbq2lXbK2g7azT2+U9a2Ym/+nbU9x+J3X/sNrlm77vAvPi99JnjTBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAACRBsAQMBvcSdubSNvbRfym3dFv3l/86a150Zxn/Tm8azdhzefUd98b6z9L1h7jhWfdd60AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAEPD3M6a4ibm2W7e277Z2PGveen7e+r3Wfu9vffae+qy1v/PN1s7hb/B36k0bAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAXPbozf3wp7soJ3aGby5V3jzs24e89qW3No1feLmdV/bCL6peG/cVHxmFu/Dt/5OP1+8J+tNGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAHJ7dHiLtva5toTxS3Um8eztp94ivPzvvN8yqlrevM5dnM/+ubx3Pystev11v+5T3jTBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAACRBsAQMDv2q5WcS/s5sbiW7ca177X2u+i+Nspbvu+dc9x7Vp88+/ribX/F2v36inF+9CbNgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAL+foLsqb3ve63t6BX/zlt/O6fcPOa181PceF3b0n3rzvJNa8/D3+Czzps2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAApLbozfd3CZ78llrW2nFLcu1Xb+14yke8zffP8Xf4E1ru71rn/XE2md9vvie96YNACBAtAEABIg2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAgN+17a237vqdcnPntPhZN731HK5t/639nW++57/5GV78O6esfa/f4P/cU7xpAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIODvZ8zN3bG1DbhT3+vmLtvaMd+8pmvX/eZnrW0IFs/hKTd/O6es7VT6O//+d55Y+zu/Y7/lJ7xpAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIOD35t5ccdPwieLxPFHctiue5ydunsPiVuypzyr+Lt56z3/ztShe97Vn1BPFY/amDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgIC/nzE3d77e+lnF/bviMd/ctlvb/lvb8bz5WcXf8luP55S3/i9Yex4+sbYDu8abNgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAALmtke/eZvs5iZdcQ/05m6mfdJ/V/x93Tw/p6zdz9+8zfrW+3ltY/qbedMGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAwO/ajt7a9t/a8TxR3Blc2zk9pXg8xd/F2v2zdp6L52ft75zy1uNZ+zvFa/GEN20AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEzG2PnrK2Kba2y3Zzi/CmtY3F4mfdVNxdPeWbv/s3P+efKG5rrj0PP2M7p6d40wYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAEDA38+YU1tga3uON4/nibW9uVNu7sStXdOb1u7Vm8dT3Jc89XfWnqtvtfZ/cG2/9TP2TLjJmzYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAAC5rZHi4obZ2vbdk8U9+9OfdYpN6/FzU3Mm3/nmzdw13YqT1n7XmvbmsX/cZ+xc3iKN20AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEvHZ79NSW3Nom3ZPjWTvmt17Tt/6dNWu/r7W93bXPWrsP167pN+/k2sD9d960AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAEJDcHi3ujr31mG9aOz+nvPV7vfX3tfa7uKm4U/lWN/dSi/+/3sqbNgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAALmtkfful+29r1Obcmd2ra7+Vlv3WFc29Zcu39OOfW93np+1nYq167X2v+CJ9au1xNvvRbetAEABIg2AIAA0QYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAwtz1atLaJ+datz1PWNh9vnue3blnetLZpuLaJubb1Wbx/nljbGn7r72uNN20AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAE/L51w2ttO/LmTlzxmt7cIlyztuP51nt+7Zlw6rOe+Obr9UTxeN76TFh7hn/G/p960wYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAEDA38+Y4j7gE2tbhDed+u5r+4lPrO14rv2db949LG6Y3rT2Wz7lrbuiN31eem884U0bAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAXPbo2tu7kK+dX/zlLW9y5uftbYhWDzmm9a+19qG6Vufqzd3lt96b7z1HjvFmzYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAAC5rZH1zb7ittta5tra9d0bW9u7buv/b7WNlXf+r2efNbaRucTb91iPmXtevGfedMGABAg2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAwNz26M0tuVOba2tblje/181NuuIxv3X38NTxFDdDTyl+97VnZvEcFs/Pqc+6ef98xu7VU7xpAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAECAaAMACBBtAAABog0AICC5PVpU3FNb+zvFLcKbx/PWz3qieI8VrX33t96rN//OKW/9n7LGmzYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AIAA0QYAECDaAAACftf2uW7uqa3t1q191toG3Fv35tau+6nPeuLmffjE2j3/xNrxfLO15+ETN39fp3y++H72pg0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AICAv58xxe2/tW3ENWvXa83a9t83/wZPnee1rca16+V+bnnrd/8NXndv2gAAAkQbAECAaAMACBBtAAABog0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAj4XdvVurkFtrZ/91Zr5/nUPXZzT7Z4zG99JhS3LN96/6yd52++n58oftZn7P7xpg0AIEC0AQAEiDYAgADRBgAQINoAAAJEGwBAgGgDAAgQbQAAAaINACBAtAEABIg2AICAv58xaztf37xzevOYi1tyN3f01nYG1+6NU956TYv3fPE8rx3zKWvf/TPWCTd50wYAECDaAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAAAkQbAEDA79qGV3ED7oniMb+Ve761b7v23U+5+b3WzuFb95GL3/2tv+XP2HP+FG/aAAACRBsAQIBoAwAIEG0AAAGiDQAgQLQBAASINgCAANEGABAg2gAA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" alt="QR Code">
+            </div>
+            <div class="qr-label">Scan to Claim<br>Your Free Site</div>
+            <div class="qr-sublabel">Takes 30 seconds</div>
+        </div>
+    </div>
+    <div class="brand-mark">David AI -- getdavid.ai</div>
+</body>
+</html>

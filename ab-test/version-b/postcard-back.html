@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    @page { size: 6.25in 4.25in; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        width: 6.25in;
+        height: 4.25in;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        overflow: hidden;
+        background: #ffffff;
+        color: #1f2937;
+        position: relative;
+    }
+
+    .safe-zone {
+        position: absolute;
+        top: 0.625in;
+        left: 0.25in;
+        width: 2.75in;
+        bottom: 0.25in;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .msg-header {
+        margin-bottom: 10px;
+    }
+    .msg-header h2 {
+        font-size: 17px;
+        font-weight: 800;
+        color: #1e40af;
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+    .msg-header .subtitle {
+        font-size: 9px;
+        color: #6b7280;
+    }
+
+    .msg-body {
+        font-size: 9.5px;
+        line-height: 1.55;
+        color: #374151;
+    }
+    .msg-body p { margin-bottom: 7px; }
+    .msg-body .highlight {
+        font-weight: 700;
+        color: #1e40af;
+    }
+
+    .brand-mark {
+        font-size: 8px;
+        color: #9ca3af;
+        margin-top: 10px;
+    }
+    .brand-mark strong {
+        color: #6b7280;
+        font-weight: 700;
+    }
+</style>
+</head>
+<body>
+    <div class="safe-zone">
+        <div class="msg-header">
+            <h2>Your Free Website<br>is Waiting</h2>
+            <div class="subtitle">No cost. No catch. Just a better online presence.</div>
+        </div>
+        <div class="msg-body">
+            <p>Hi <span class="highlight">Pacific North Utah's Home Plumbers Eagle Mountain</span>,</p>
+            <p>We help local businesses like yours get found online. We'd like to build you a <span class="highlight">free, professional website</span> with your business info, reviews, and a click-to-call button.</p>
+            <p>Scan the QR code on the front to claim yours. It takes 30 seconds.</p>
+        </div>
+        <div class="brand-mark">
+            <strong>David AI</strong> -- getdavid.ai
+        </div>
+    </div>
+</body>
+</html>

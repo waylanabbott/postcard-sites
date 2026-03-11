@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/B Test Preview - David AI Postcard Campaign</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fb; color: #1a1a2e; }
+        .header { background: #1a1a2e; color: white; padding: 40px 24px; text-align: center; }
+        .header h1 { font-size: 2rem; margin-bottom: 8px; }
+        .header p { color: rgba(255,255,255,0.7); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
+        .version { background: white; border-radius: 16px; padding: 32px; margin-bottom: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border: 1px solid #e5e7eb; }
+        .version h2 { font-size: 1.4rem; margin-bottom: 4px; }
+        .version .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-bottom: 16px; }
+        .tag-a { background: #dbeafe; color: #1e40af; }
+        .tag-b { background: #fef3c7; color: #92400e; }
+        .version p { color: #6b7280; margin-bottom: 16px; line-height: 1.6; }
+        .links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .links a { display: inline-block; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: transform 0.15s; }
+        .links a:hover { transform: translateY(-1px); }
+        .link-site { background: #1a1a2e; color: white; }
+        .link-front { background: #e5e7eb; color: #1a1a2e; }
+        .link-back { background: #f3f4f6; color: #374151; }
+        .details { margin-top: 20px; padding: 16px; background: #f8f9fb; border-radius: 12px; font-size: 0.88rem; }
+        .details dt { font-weight: 700; color: #1a1a2e; margin-top: 8px; }
+        .details dd { color: #6b7280; margin-bottom: 4px; }
+        .hypothesis { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 24px; margin-bottom: 32px; }
+        .hypothesis h3 { color: #166534; margin-bottom: 8px; }
+        .hypothesis p { color: #374151; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>A/B Test Preview</h1>
+        <p>David AI Postcard Campaign -- Utah County Home Services</p>
+    </div>
+    <div class="container">
+        <div class="hypothesis">
+            <h3>Test Hypothesis</h3>
+            <p><strong>Version A</strong> (locked website preview) creates more curiosity and higher engagement because recipients see a real site built for their business. The "sunk cost" of seeing something already built compels action.</p>
+            <p style="margin-top:8px;"><strong>Version B</strong> (direct contact) reduces friction by removing the intermediate step. Recipients go straight to claiming their website without needing to see a preview first. May convert faster for businesses that just want results.</p>
+        </div>
+
+        <div class="version">
+            <span class="tag tag-a">VERSION A</span>
+            <h2>Locked Website Preview Flow</h2>
+            <p><strong>Business:</strong> Price is Right Landscaping (Saratoga Springs, UT)<br>
+            <strong>Category:</strong> Landscaping | <strong>Score:</strong> 90/100<br>
+            <strong>QR Destination:</strong> Locked preview website → contact CTA</p>
+            <p>The postcard shows a screenshot of the website we already built. The QR code leads to the live site, which is gated halfway down. Recipients must contact us to unlock the full version.</p>
+            <div class="links">
+                <a href="version-a/site.html" class="link-site">View Website (Gated)</a>
+                <a href="version-a/postcard-front.html" class="link-front">Postcard Front</a>
+                <a href="version-a/postcard-back.html" class="link-back">Postcard Back</a>
+            </div>
+            <div class="details">
+                <dl>
+                    <dt>Postcard Headline</dt><dd>"We Built You a Free Website"</dd>
+                    <dt>QR Label</dt><dd>"Scan to see your new site"</dd>
+                    <dt>Website Gate CTA</dt><dd>"Unlock the Full Website" → davidmarketing.co/getyourwebsite</dd>
+                    <dt>Conversion Path</dt><dd>Postcard → QR → Preview site → Gate → Contact form</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="version">
+            <span class="tag tag-b">VERSION B</span>
+            <h2>Direct Contact Flow</h2>
+            <p><strong>Business:</strong> Pacific North Utah's Home Plumbers (Eagle Mountain, UT)<br>
+            <strong>Category:</strong> Plumbing | <strong>Score:</strong> 83/100<br>
+            <strong>QR Destination:</strong> Direct to contact page</p>
+            <p>The postcard uses a clean, text-driven design with no screenshot. The QR code goes directly to the contact/claim page. Lower friction, faster path to conversion.</p>
+            <div class="links">
+                <a href="version-b/site.html" class="link-site">View Website (for reference)</a>
+                <a href="version-b/postcard-front.html" class="link-front">Postcard Front</a>
+                <a href="version-b/postcard-back.html" class="link-back">Postcard Back</a>
+            </div>
+            <div class="details">
+                <dl>
+                    <dt>Postcard Headline</dt><dd>"Claim Your Free Website"</dd>
+                    <dt>QR Label</dt><dd>"Scan to Claim Your Free Site"</dd>
+                    <dt>Direct CTA</dt><dd>QR → davidmarketing.co/getyourwebsite</dd>
+                    <dt>Conversion Path</dt><dd>Postcard → QR → Contact form (1 step)</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
