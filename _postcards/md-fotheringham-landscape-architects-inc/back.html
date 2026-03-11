@@ -25,74 +25,52 @@
         flex-direction: row;
     }
 
-    /* Left half: our message */
+    /* Left half only - Lob prints address + postage on right half */
     .message-area {
-        width: 3in;
-        padding: 0.2in 0.25in 0.2in 0.1in;
+        width: 3.25in;
+        padding: 0.25in 0.3in 0.25in 0.2in;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        border-right: 1.5px solid #e5e7eb;
+        justify-content: center;
     }
 
     .msg-header {
-        margin-bottom: 10px;
+        margin-bottom: 14px;
     }
     .msg-header h2 {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 800;
         color: #15803d;
         line-height: 1.2;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
     }
     .msg-header .subtitle {
-        font-size: 10px;
+        font-size: 11px;
         color: #6b7280;
     }
 
     .msg-body {
-        font-size: 10px;
-        line-height: 1.6;
+        font-size: 11px;
+        line-height: 1.65;
         color: #374151;
-        flex: 1;
     }
-    .msg-body p { margin-bottom: 8px; }
+    .msg-body p { margin-bottom: 10px; }
     .msg-body .highlight {
         font-weight: 700;
         color: #15803d;
     }
 
     .return-address {
-        font-size: 8px;
+        font-size: 9px;
         color: #9ca3af;
         line-height: 1.5;
-        padding-top: 8px;
-        border-top: 1px solid #f3f4f6;
+        margin-top: 14px;
+        padding-top: 10px;
+        border-top: 1px solid #e5e7eb;
     }
     .return-address strong {
         color: #6b7280;
         font-weight: 700;
-    }
-
-    /* Right half: recipient address (Lob handles postage) */
-    .address-area {
-        flex: 1;
-        padding: 0.4in 0.2in 0.2in 0.35in;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .to-name {
-        font-size: 14px;
-        font-weight: 700;
-        margin-bottom: 4px;
-        color: #111827;
-    }
-    .to-address {
-        font-size: 12px;
-        line-height: 1.6;
-        color: #374151;
     }
 </style>
 </head>
@@ -110,15 +88,7 @@
                 <p>Want changes or upgrades? Just reach out — we're happy to help.</p>
             </div>
             <div class="return-address">
-                <strong>David AI</strong> — getdavid.ai<br>
-                Scale Intelligence. Tenfold.
-            </div>
-        </div>
-        <div class="address-area">
-            <div class="to-name">MD Fotheringham, Landscape Architects, Inc</div>
-            <div class="to-address">
-                548 W 1000 N<br>
-                Mapleton, UT 84664, USA
+                <strong>David AI</strong> — getdavid.ai
             </div>
         </div>
     </div>
