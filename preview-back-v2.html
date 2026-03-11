@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    @page { size: 6.25in 4.25in; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        width: 6.25in;
+        height: 4.25in;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        overflow: hidden;
+        background: #ffffff;
+        color: #1f2937;
+        position: relative;
+    }
+
+    .safe-zone {
+        position: absolute;
+        top: 0.125in;
+        left: 0.125in;
+        right: 0.125in;
+        bottom: 0.125in;
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Left half only - Lob prints address + postage on right half */
+    .message-area {
+        width: 3.25in;
+        padding: 0.25in 0.3in 0.25in 0.2in;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .msg-header {
+        margin-bottom: 14px;
+    }
+    .msg-header h2 {
+        font-size: 20px;
+        font-weight: 800;
+        color: #b45309;
+        line-height: 1.2;
+        margin-bottom: 6px;
+    }
+    .msg-header .subtitle {
+        font-size: 11px;
+        color: #6b7280;
+    }
+
+    .msg-body {
+        font-size: 11px;
+        line-height: 1.65;
+        color: #374151;
+    }
+    .msg-body p { margin-bottom: 10px; }
+    .msg-body .highlight {
+        font-weight: 700;
+        color: #b45309;
+    }
+
+    .return-address {
+        font-size: 9px;
+        color: #9ca3af;
+        line-height: 1.5;
+        margin-top: 14px;
+        padding-top: 10px;
+        border-top: 1px solid #e5e7eb;
+    }
+    .return-address strong {
+        color: #6b7280;
+        font-weight: 700;
+    }
+</style>
+</head>
+<body>
+    <div class="safe-zone">
+        <div class="message-area">
+            <div class="msg-header">
+                <h2>Your Free Website<br>is Live</h2>
+                <div class="subtitle">We built it for you — no cost, no obligation</div>
+            </div>
+            <div class="msg-body">
+                <p>Hi <span class="highlight">Desert Edge Electric</span>,</p>
+                <p>We noticed your business could use a stronger online presence, so we went ahead and built you a <span class="highlight">free, professional website</span>.</p>
+                <p>It's already live with your business info, Google reviews, and a click-to-call button. Scan the QR code on the front to check it out.</p>
+                <p>Want changes or upgrades? Just reach out — we're happy to help.</p>
+            </div>
+            <div class="return-address">
+                <strong>David AI</strong> — getdavid.ai
+            </div>
+        </div>
+    </div>
+</body>
+</html>
