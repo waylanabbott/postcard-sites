@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    @page { size: 6.25in 4.25in; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        width: 6.25in;
+        height: 4.25in;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        overflow: hidden;
+        background: #ffffff;
+        color: #1f2937;
+        position: relative;
+    }
+
+    .safe-zone {
+        position: absolute;
+        top: 0.125in;
+        left: 0.125in;
+        right: 0.125in;
+        bottom: 0.125in;
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Left half: our message */
+    .message-area {
+        width: 3in;
+        padding: 0.2in 0.25in 0.2in 0.1in;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1.5px solid #e5e7eb;
+    }
+
+    .msg-header {
+        margin-bottom: 10px;
+    }
+    .msg-header h2 {
+        font-size: 16px;
+        font-weight: 800;
+        color: #15803d;
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+    .msg-header .subtitle {
+        font-size: 10px;
+        color: #6b7280;
+    }
+
+    .msg-body {
+        font-size: 10px;
+        line-height: 1.6;
+        color: #374151;
+        flex: 1;
+    }
+    .msg-body p { margin-bottom: 8px; }
+    .msg-body .highlight {
+        font-weight: 700;
+        color: #15803d;
+    }
+
+    .return-address {
+        font-size: 8px;
+        color: #9ca3af;
+        line-height: 1.5;
+        padding-top: 8px;
+        border-top: 1px solid #f3f4f6;
+    }
+    .return-address strong {
+        color: #6b7280;
+        font-weight: 700;
+    }
+
+    /* Right half: recipient address (Lob handles postage) */
+    .address-area {
+        flex: 1;
+        padding: 0.4in 0.2in 0.2in 0.35in;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .to-name {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #111827;
+    }
+    .to-address {
+        font-size: 12px;
+        line-height: 1.6;
+        color: #374151;
+    }
+</style>
+</head>
+<body>
+    <div class="safe-zone">
+        <div class="message-area">
+            <div class="msg-header">
+                <h2>Your Free Website<br>is Live</h2>
+                <div class="subtitle">We built it for you — no cost, no obligation</div>
+            </div>
+            <div class="msg-body">
+                <p>Hi <span class="highlight">Price is Right Landscaping</span>,</p>
+                <p>We noticed your business could use a stronger online presence, so we went ahead and built you a <span class="highlight">free, professional website</span>.</p>
+                <p>It's already live with your business info, Google reviews, and a click-to-call button. Scan the QR code on the front to check it out.</p>
+                <p>Want changes or upgrades? Just reach out — we're happy to help.</p>
+            </div>
+            <div class="return-address">
+                <strong>David AI</strong> — getdavid.ai<br>
+                Scale Intelligence. Tenfold.
+            </div>
+        </div>
+        <div class="address-area">
+            <div class="to-name">Price is Right Landscaping</div>
+            <div class="to-address">
+                1293 W Skyline Dr<br>
+                Saratoga Springs, UT 84045, USA
+            </div>
+        </div>
+    </div>
+</body>
+</html>
