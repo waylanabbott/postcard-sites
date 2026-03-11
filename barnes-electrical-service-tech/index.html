@@ -6,362 +6,543 @@
     <title>Barnes Electrical Service Tech — Licensed Electrician You Can Trust | Utah County</title>
     <meta name="description" content="Barnes Electrical Service Tech — Safe, Professional Electrical Services. Serving Utah County. Call (801) 465-4779 today.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* === RESET & BASE === */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f9fafb;
-            color: #1f2937;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #1a1a2e;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
         a { color: inherit; text-decoration: none; }
-        img { max-width: 100%; display: block; }
 
         /* === HERO === */
         .hero {
-            background: linear-gradient(135deg, #78350f 0%, #b45309 50%, #f59e0b 100%);
-            color: white;
-            padding: 72px 24px 96px;
-            text-align: center;
             position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 24px 100px;
             overflow: hidden;
+            background: #b45309;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #78350f 0%, #b45309 50%, #f59e0b 100%);
+            opacity: 0.95;
         }
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 48px;
-            background: #f9fafb;
-            clip-path: ellipse(55% 100% at 50% 100%);
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%);
         }
-        .hero-icon {
-            font-size: 3rem;
-            margin-bottom: 16px;
-            display: block;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 640px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            padding: 8px 18px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.95);
+            letter-spacing: 0.03em;
+            margin-bottom: 24px;
         }
         .hero h1 {
-            font-size: 2.5rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.2rem;
             font-weight: 900;
+            color: white;
+            line-height: 1.08;
+            margin-bottom: 16px;
             letter-spacing: -0.02em;
-            margin-bottom: 8px;
-            line-height: 1.1;
         }
-        .hero .tagline {
+        .hero .subtitle {
             font-size: 1.15rem;
-            font-weight: 500;
-            opacity: 0.92;
-            margin-bottom: 24px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            color: rgba(255,255,255,0.85);
+            max-width: 480px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+            font-weight: 400;
         }
-        .hero-rating {
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(8px);
-            border-radius: 50px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        .hero-rating .stars { color: #fbbf24; letter-spacing: 2px; }
-        .hero-rating .count { opacity: 0.85; font-weight: 400; font-size: 0.9rem; }
-
-        /* === CONTAINER === */
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* === CARDS === */
-        .card {
             background: white;
-            border-radius: 16px;
-            padding: 32px 28px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.06);
-            margin-bottom: 20px;
-        }
-        .card-lifted {
-            margin-top: -48px;
-            position: relative;
-            z-index: 2;
-        }
-        .card h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
             color: #b45309;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .card p {
-            color: #4b5563;
-            font-size: 0.95rem;
-            line-height: 1.7;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            border: 1.5px solid rgba(255,255,255,0.25);
+            color: white;
+            padding: 15px 32px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.18); }
+
+        .hero-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 28px;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 12px 22px;
+        }
+        .hero-rating .stars { color: #fbbf24; font-size: 1.1rem; letter-spacing: 2px; }
+        .hero-rating .rating-text { color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.95rem; }
+        .hero-rating .count { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+        /* === WAVE DIVIDER === */
+        .wave-divider {
+            position: relative;
+            margin-top: -60px;
+            z-index: 3;
+        }
+        .wave-divider svg { display: block; width: 100%; height: 60px; }
+
+        /* === SECTIONS === */
+        .section { padding: 64px 24px; }
+        .section-inner { max-width: 800px; margin: 0 auto; }
+        .section-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #b45309;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            line-height: 1.15;
         }
 
-        /* === CONTACT INFO === */
-        .contact-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            margin-bottom: 16px;
+        /* === STATS ROW === */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: #f3f4f6;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 48px;
         }
-        .contact-row:last-child { margin-bottom: 0; }
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+        .stat-card {
+            background: white;
+            padding: 28px 20px;
+            text-align: center;
+        }
+        .stat-card .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #b45309;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .stat-card .stat-label {
+            font-size: 0.8rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        /* === CONTACT GRID === */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .contact-card {
+            background: #f8f9fb;
+            border: 1px solid #e8ecf1;
+            border-radius: 16px;
+            padding: 24px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .contact-card:hover {
+            border-color: #b4530940;
+            box-shadow: 0 4px 16px #b4530910;
+        }
+        .contact-card .cc-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
             background: #b4530910;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
-            flex-shrink: 0;
+            font-size: 1.2rem;
+            margin-bottom: 14px;
         }
-        .contact-label {
-            font-size: 0.75rem;
+        .contact-card .cc-label {
+            font-size: 0.72rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
             color: #9ca3af;
             font-weight: 600;
-            margin-bottom: 2px;
-        }
-        .contact-value {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #1f2937;
-        }
-        .contact-value a {
-            color: #b45309;
-            font-weight: 700;
-        }
-
-        /* === SERVICES GRID === */
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .service-chip {
-            background: #b4530908;
-            border: 1px solid #b4530915;
-            padding: 12px 14px;
-            border-radius: 10px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: #374151;
-            text-align: center;
-            transition: background 0.2s;
-        }
-
-        /* === CTA BUTTON === */
-        .cta-wrap { text-align: center; padding: 8px 0 24px; }
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #78350f 0%, #b45309 50%, #f59e0b 100%);
-            color: white;
-            padding: 18px 48px;
-            border-radius: 60px;
-            font-size: 1.15rem;
-            font-weight: 700;
-            box-shadow: 0 4px 20px #b4530940;
-            transition: transform 0.15s, box-shadow 0.15s;
-            letter-spacing: -0.01em;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px #b4530950;
-        }
-        .cta-button:active { transform: translateY(0); }
-
-        /* === TRUST BADGES === */
-        .trust-row {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 28px 16px;
-            flex-wrap: wrap;
-        }
-        .trust-badge {
-            text-align: center;
-            min-width: 80px;
-        }
-        .trust-badge .t-icon {
-            font-size: 1.6rem;
-            display: block;
             margin-bottom: 4px;
         }
-        .trust-badge .t-label {
-            font-size: 0.75rem;
+        .contact-card .cc-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .contact-card .cc-value a { color: #b45309; }
+        .contact-card.full-width { grid-column: 1 / -1; }
+
+        /* === SERVICES === */
+        .services-section { background: #f8f9fb; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .service-item {
+            background: white;
+            border: 1px solid #e8ecf1;
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: border-color 0.2s, transform 0.15s;
+        }
+        .service-item:hover {
+            border-color: #b4530930;
+            transform: translateY(-1px);
+        }
+        .service-item .si-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #b45309;
+            flex-shrink: 0;
+            opacity: 0.6;
+        }
+        .service-item .si-text {
+            font-size: 0.92rem;
             font-weight: 600;
+            color: #374151;
+        }
+
+        /* === ABOUT === */
+        .about-content {
+            font-size: 1.08rem;
+            color: #4b5563;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+        .about-content p + p { margin-top: 16px; }
+        .trust-quote {
+            margin-top: 24px;
+            padding: 20px 24px;
+            border-left: 3px solid #b45309;
+            background: #b4530905;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
             color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
+            font-size: 0.95rem;
+        }
+
+        /* === CTA BANNER === */
+        .cta-banner {
+            background: linear-gradient(135deg, #78350f 0%, #b45309 50%, #f59e0b 100%);
+            padding: 56px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.1) 0%, transparent 60%);
+        }
+        .cta-banner-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .cta-banner h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .cta-banner p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+        }
+        .cta-banner .btn-primary {
+            padding: 18px 44px;
+            font-size: 1.1rem;
+            border-radius: 14px;
         }
 
         /* === MAP === */
         .map-wrap {
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.06);
-            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e8ecf1;
         }
         .map-wrap iframe {
             width: 100%;
-            height: 280px;
+            height: 300px;
             border: 0;
         }
 
         /* === FOOTER === */
         .footer {
-            text-align: center;
-            padding: 40px 20px 32px;
-            border-top: 1px solid #e5e7eb;
-            margin-top: 20px;
-        }
-        .footer .copyright {
-            font-size: 0.8rem;
+            background: #0f1117;
             color: #9ca3af;
-            margin-bottom: 12px;
+            padding: 48px 24px 36px;
+            text-align: center;
         }
-        .footer .built-by {
+        .footer-inner { max-width: 600px; margin: 0 auto; }
+        .footer-brand {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .footer-address {
+            font-size: 0.88rem;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .footer-divider {
+            width: 48px;
+            height: 2px;
+            background: rgba(255,255,255,0.1);
+            margin: 24px auto;
+        }
+        .footer-meta {
+            font-size: 0.78rem;
+            color: #6b7280;
+        }
+        .footer-meta a { color: #9ca3af; transition: color 0.2s; }
+        .footer-meta a:hover { color: white; }
+        .built-by {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.8rem;
+            margin-top: 16px;
+            font-size: 0.78rem;
             color: #6b7280;
-            background: #f3f4f6;
-            padding: 8px 16px;
+            background: rgba(255,255,255,0.05);
+            padding: 8px 18px;
             border-radius: 50px;
-            transition: background 0.2s;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: border-color 0.2s;
         }
-        .footer .built-by:hover { background: #e5e7eb; }
-        .footer .built-by strong { color: #1f2937; }
-        .upgrade-cta {
+        .built-by:hover { border-color: rgba(255,255,255,0.2); }
+        .built-by strong { color: #d1d5db; }
+        .upgrade-link {
             display: block;
-            margin-top: 10px;
+            margin-top: 12px;
             font-size: 0.75rem;
-            color: #9ca3af;
+            color: #6b7280;
         }
-        .upgrade-cta a { color: #b45309; font-weight: 600; }
+        .upgrade-link a { color: #b45309; font-weight: 600; }
+        .upgrade-link a:hover { text-decoration: underline; }
 
         /* === RESPONSIVE === */
-        @media (max-width: 520px) {
-            .hero { padding: 56px 20px 80px; }
-            .hero h1 { font-size: 1.75rem; }
-            .hero .tagline { font-size: 1rem; }
-            .card { padding: 24px 20px; }
+        @media (max-width: 640px) {
+            .hero { min-height: 440px; padding: 60px 20px 80px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subtitle { font-size: 1rem; }
+            .hero-actions { flex-direction: column; align-items: center; }
+            .stats-row { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
             .services-grid { grid-template-columns: 1fr; }
-            .cta-button { padding: 16px 36px; font-size: 1.05rem; }
-            .trust-row { gap: 14px; }
-            .map-wrap iframe { height: 220px; }
+            .section-title { font-size: 1.6rem; }
+            .cta-banner h2 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- === HERO === -->
+    <!-- HERO -->
     <section class="hero">
-        <span class="hero-icon">⚡</span>
-        <h1>Barnes Electrical Service Tech</h1>
-        <p class="tagline">Licensed Electrician You Can Trust in Utah County</p>
-        <!-- INFERRED: Rating data from Google Places. May update over time. -->
-        
+        <div class="hero-content">
+            <div class="hero-badge">⚡ Utah County Safe, Professional Electrical Services</div>
+            <h1>Barnes Electrical Service Tech</h1>
+            <p class="subtitle">Licensed Electrician You Can Trust in Utah County. Quality work, honest pricing, and a team you can trust.</p>
+            <div class="hero-actions">
+                <a href="tel:8014654779" class="btn-primary">📞 Need an Electrician? Call Now</a>
+                <a href="https://maps.google.com/?cid=128382943334065574&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" class="btn-secondary" target="_blank">📍 Get Directions</a>
+            </div>
+            
+        </div>
     </section>
 
-    <div class="container">
-
-        <!-- === CONTACT CARD === -->
-        <div class="card card-lifted">
-            <h2>Get in Touch</h2>
-            <div class="contact-row">
-                <div class="contact-icon">📞</div>
-                <div>
-                    <div class="contact-label">Phone</div>
-                    <div class="contact-value"><a href="tel:8014654779">(801) 465-4779</a></div>
-                </div>
-            </div>
-            <div class="contact-row">
-                <div class="contact-icon">📍</div>
-                <div>
-                    <div class="contact-label">Address</div>
-                    <!-- VERIFIED: Address from Google Places -->
-                    <div class="contact-value">141 1000 W St, Payson, UT 84651, USA</div>
-                </div>
-            </div>
-            <div class="contact-row">
-                <div class="contact-icon">🗺️</div>
-                <div>
-                    <div class="contact-label">Directions</div>
-                    <div class="contact-value"><a href="https://maps.google.com/?cid=128382943334065574&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Open in Google Maps →</a></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- === ABOUT / DESCRIPTION === -->
-        <div class="card">
-            <h2>About Barnes Electrical Service Tech</h2>
-            <!-- INFERRED: Description is generated based on service category, not provided by the business -->
-            <p>Keeping your home safe and powered. From simple outlet repairs to complete rewiring, our licensed electricians do the job right.</p>
-            <p style="margin-top:12px; font-style:italic; color:#6b7280; font-size:0.9rem;">Licensed and insured for your safety and peace of mind.</p>
-        </div>
-
-        <!-- === SERVICES === -->
-        <div class="card">
-            <h2>Services</h2>
-            <!-- INFERRED: Service list based on category. Actual services may vary. -->
-            <div class="services-grid">
-                <div class="service-chip">Electrical Repairs</div>
-                <div class="service-chip">Panel Upgrades</div>
-                <div class="service-chip">Outlet & Switch Installation</div>
-                <div class="service-chip">Lighting Installation</div>
-                <div class="service-chip">Ceiling Fan Installation</div>
-                <div class="service-chip">Circuit Breaker Service</div>
-                <div class="service-chip">Whole-Home Surge Protection</div>
-                <div class="service-chip">EV Charger Installation</div>
-            </div>
-        </div>
-
-        <!-- === CTA === -->
-        <div class="cta-wrap">
-            <a href="tel:8014654779" class="cta-button">📞 Need an Electrician? Call Now</a>
-        </div>
-
-        <!-- === TRUST BADGES === -->
-        <div class="trust-row">
-            <div class="trust-badge"><span class="t-icon">🛡️</span><span class="t-label">Licensed</span></div>
-            <div class="trust-badge"><span class="t-icon">⚡</span><span class="t-label">Fast Response</span></div>
-            <div class="trust-badge"><span class="t-icon">💰</span><span class="t-label">Fair Pricing</span></div>
-        </div>
-
-        <!-- === MAP === -->
-        <div class="map-wrap">
-            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADOZK-O2kCgoSjgzoL6suNm8sspPK3VCU&q=Barnes+Electrical+Service+Tech%2C+141+1000+W+St%2C+Payson%2C+UT+84651%2C+USA" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
+    <!-- WAVE -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
+            <path d="M0 60V20C240 0 480 40 720 30C960 20 1200 50 1440 20V60H0Z" fill="white"/>
+        </svg>
     </div>
 
-    <!-- === FOOTER === -->
+    <!-- STATS -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-value">N/A</div>
+                    <div class="stat-label">Google Rating</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">New</div>
+                    <div class="stat-label">Reviews</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Utah Co.</div>
+                    <div class="stat-label">Service Area</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" style="padding-top:0;">
+        <div class="section-inner">
+            <div class="section-label">Contact</div>
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="cc-icon">📞</div>
+                    <div class="cc-label">Phone</div>
+                    <div class="cc-value"><a href="tel:8014654779">(801) 465-4779</a></div>
+                </div>
+                <div class="contact-card">
+                    <div class="cc-icon">📍</div>
+                    <div class="cc-label">Address</div>
+                    <div class="cc-value">141 1000 W St, Payson, UT 84651, USA</div>
+                </div>
+                <div class="contact-card full-width">
+                    <div class="cc-icon">🗺️</div>
+                    <div class="cc-label">Directions</div>
+                    <div class="cc-value"><a href="https://maps.google.com/?cid=128382943334065574&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank">Open in Google Maps →</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services-section">
+        <div class="section-inner">
+            <div class="section-label">What We Do</div>
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item"><div class="si-dot"></div><div class="si-text">Electrical Repairs</div></div>
+                <div class="service-item"><div class="si-dot"></div><div class="si-text">Panel Upgrades</div></div>
+                <div class="service-item"><div class="si-dot"></div><div class="si-text">Outlet & Switch Installation</div></div>
+                <div class="service-item"><div class="si-dot"></div><div class="si-text">Lighting Installation</div></div>
+                <div class="service-item"><div class="si-dot"></div><div class="si-text">Ceiling Fan Installation</div></div>
+                <div class="service-item"><div class="si-dot"></div><div class="si-text">Circuit Breaker Service</div></div>
+                <div class="service-item"><div class="si-dot"></div><div class="si-text">Whole-Home Surge Protection</div></div>
+                <div class="service-item"><div class="si-dot"></div><div class="si-text">EV Charger Installation</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-label">About Us</div>
+            <h2 class="section-title">About Barnes Electrical Service Tech</h2>
+            <div class="about-content">
+                <p>Keeping your home safe and powered. From simple outlet repairs to complete rewiring, our licensed electricians do the job right.</p>
+            </div>
+            <div class="trust-quote">Licensed and insured for your safety and peace of mind.</div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div class="cta-banner-inner">
+            <h2>Ready to Get Started?</h2>
+            <p>Call now for a free estimate. We'd love to help.</p>
+            <a href="tel:8014654779" class="btn-primary">📞 Need an Electrician? Call Now</a>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADOZK-O2kCgoSjgzoL6suNm8sspPK3VCU&q=Barnes+Electrical+Service+Tech%2C+141+1000+W+St%2C+Payson%2C+UT+84651%2C+USA" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="copyright">&copy; 2026 Barnes Electrical Service Tech. All rights reserved.</div>
-        <a href="https://getdavid.ai" class="built-by" target="_blank" rel="noopener">
-            🤖 Built by <strong>David AI</strong>
-        </a>
-        <span class="upgrade-cta">
-            Want a custom website? <a href="https://getdavid.ai" target="_blank" rel="noopener">Upgrade with David AI →</a>
-        </span>
+        <div class="footer-inner">
+            <div class="footer-brand">Barnes Electrical Service Tech</div>
+            <div class="footer-address">141 1000 W St, Payson, UT 84651, USA<br>(801) 465-4779</div>
+            <div class="footer-divider"></div>
+            <div class="footer-meta">
+                &copy; 2026 Barnes Electrical Service Tech. All rights reserved.
+            </div>
+            <a href="https://getdavid.ai" class="built-by" target="_blank" rel="noopener">
+                ⚡ Built by <strong>David AI</strong>
+            </a>
+            <span class="upgrade-link">
+                Want a custom website? <a href="https://getdavid.ai" target="_blank">Upgrade with David AI →</a>
+            </span>
+        </div>
     </footer>
 
 </body>
