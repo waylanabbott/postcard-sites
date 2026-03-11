@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 Msg painting LLC — Fresh Paint, Fresh Start | Utah County</title>
+    <meta name="description" content="360 Msg painting LLC — Professional Interior & Exterior Painting. Serving Utah County. Call (317) 308-0744 today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* === RESET & BASE === */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f9fafb;
+            color: #1f2937;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+
+        /* === HERO === */
+        .hero {
+            background: linear-gradient(135deg, #831843 0%, #be185d 50%, #f472b6 100%);
+            color: white;
+            padding: 72px 24px 96px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 48px;
+            background: #f9fafb;
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+        .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            line-height: 1.1;
+        }
+        .hero .tagline {
+            font-size: 1.15rem;
+            font-weight: 500;
+            opacity: 0.92;
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .hero-rating .stars { color: #fbbf24; letter-spacing: 2px; }
+        .hero-rating .count { opacity: 0.85; font-weight: 400; font-size: 0.9rem; }
+
+        /* === CONTAINER === */
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* === CARDS === */
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
+        }
+        .card-lifted {
+            margin-top: -48px;
+            position: relative;
+            z-index: 2;
+        }
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #be185d;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .card p {
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* === CONTACT INFO === */
+        .contact-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+        .contact-row:last-child { margin-bottom: 0; }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #be185d10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .contact-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #9ca3af;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        .contact-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .contact-value a {
+            color: #be185d;
+            font-weight: 700;
+        }
+
+        /* === SERVICES GRID === */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .service-chip {
+            background: #be185d08;
+            border: 1px solid #be185d15;
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #374151;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        /* === CTA BUTTON === */
+        .cta-wrap { text-align: center; padding: 8px 0 24px; }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #831843 0%, #be185d 50%, #f472b6 100%);
+            color: white;
+            padding: 18px 48px;
+            border-radius: 60px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            box-shadow: 0 4px 20px #be185d40;
+            transition: transform 0.15s, box-shadow 0.15s;
+            letter-spacing: -0.01em;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px #be185d50;
+        }
+        .cta-button:active { transform: translateY(0); }
+
+        /* === TRUST BADGES === */
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 28px 16px;
+            flex-wrap: wrap;
+        }
+        .trust-badge {
+            text-align: center;
+            min-width: 80px;
+        }
+        .trust-badge .t-icon {
+            font-size: 1.6rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .trust-badge .t-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* === MAP === */
+        .map-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
+        }
+        .map-wrap iframe {
+            width: 100%;
+            height: 280px;
+            border: 0;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            text-align: center;
+            padding: 40px 20px 32px;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 20px;
+        }
+        .footer .copyright {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            margin-bottom: 12px;
+        }
+        .footer .built-by {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: #6b7280;
+            background: #f3f4f6;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: background 0.2s;
+        }
+        .footer .built-by:hover { background: #e5e7eb; }
+        .footer .built-by strong { color: #1f2937; }
+        .upgrade-cta {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+        .upgrade-cta a { color: #be185d; font-weight: 600; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 520px) {
+            .hero { padding: 56px 20px 80px; }
+            .hero h1 { font-size: 1.75rem; }
+            .hero .tagline { font-size: 1rem; }
+            .card { padding: 24px 20px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .cta-button { padding: 16px 36px; font-size: 1.05rem; }
+            .trust-row { gap: 14px; }
+            .map-wrap iframe { height: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- === HERO === -->
+    <section class="hero">
+        <span class="hero-icon">🎨</span>
+        <h1>360 Msg painting LLC</h1>
+        <p class="tagline">Fresh Paint, Fresh Start in Utah County</p>
+        <!-- INFERRED: Rating data from Google Places. May update over time. -->
+        
+    </section>
+
+    <div class="container">
+
+        <!-- === CONTACT CARD === -->
+        <div class="card card-lifted">
+            <h2>Get in Touch</h2>
+            <div class="contact-row">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value"><a href="tel:3173080744">(317) 308-0744</a></div>
+                </div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <div class="contact-label">Address</div>
+                    <!-- VERIFIED: Address from Google Places -->
+                    <div class="contact-value">573 E Main St, American Fork, UT 84003, USA</div>
+                </div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-icon">🗺️</div>
+                <div>
+                    <div class="contact-label">Directions</div>
+                    <div class="contact-value"><a href="https://maps.google.com/?cid=14311930655239872949&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Open in Google Maps →</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- === ABOUT / DESCRIPTION === -->
+        <div class="card">
+            <h2>About 360 Msg painting LLC</h2>
+            <!-- INFERRED: Description is generated based on service category, not provided by the business -->
+            <p>A fresh coat of paint transforms any space. We deliver flawless results with clean lines, quality materials, and attention to detail.</p>
+            <p style="margin-top:12px; font-style:italic; color:#6b7280; font-size:0.9rem;">Clean, professional, and detail-oriented — every time.</p>
+        </div>
+
+        <!-- === SERVICES === -->
+        <div class="card">
+            <h2>Services</h2>
+            <!-- INFERRED: Service list based on category. Actual services may vary. -->
+            <div class="services-grid">
+                <div class="service-chip">Interior Painting</div>
+                <div class="service-chip">Exterior Painting</div>
+                <div class="service-chip">Cabinet Painting</div>
+                <div class="service-chip">Deck & Fence Staining</div>
+                <div class="service-chip">Drywall Repair & Texture</div>
+                <div class="service-chip">Color Consultation</div>
+                <div class="service-chip">Commercial Painting</div>
+                <div class="service-chip">Wallpaper Removal</div>
+            </div>
+        </div>
+
+        <!-- === CTA === -->
+        <div class="cta-wrap">
+            <a href="tel:3173080744" class="cta-button">📞 Get a Free Painting Estimate</a>
+        </div>
+
+        <!-- === TRUST BADGES === -->
+        <div class="trust-row">
+            <div class="trust-badge"><span class="t-icon">🛡️</span><span class="t-label">Licensed</span></div>
+            <div class="trust-badge"><span class="t-icon">⚡</span><span class="t-label">Fast Response</span></div>
+            <div class="trust-badge"><span class="t-icon">💰</span><span class="t-label">Fair Pricing</span></div>
+        </div>
+
+        <!-- === MAP === -->
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADOZK-O2kCgoSjgzoL6suNm8sspPK3VCU&q=360+Msg+painting+LLC%2C+573+E+Main+St%2C+American+Fork%2C+UT+84003%2C+USA" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+        <div class="copyright">&copy; 2026 360 Msg painting LLC. All rights reserved.</div>
+        <a href="https://getdavid.ai" class="built-by" target="_blank" rel="noopener">
+            🤖 Built by <strong>David AI</strong>
+        </a>
+        <span class="upgrade-cta">
+            Want a custom website? <a href="https://getdavid.ai" target="_blank" rel="noopener">Upgrade with David AI →</a>
+        </span>
+    </footer>
+
+</body>
+</html>
